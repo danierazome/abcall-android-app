@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">ABCall</string>
+
+    <string name="user">Usario</string>
+    <string name="team">Team</string>
+    <string name="continue_as">Continua como</string>
+
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+
+    <string name="sign_in">Ingresar</string>
+    <string name="sign_up">Registrarse</string>
+
+    <string name="greeting_login">Bienvenido a Vinilos</string>
+    <string name="greeting_visitant">Bienvenido Visitante</string>
+    <string name="greeting_collector">Bienvenido Coleccionista</string>
+    <string name="login_header">¡Bienvenido a Vinilos!\nLa app de los melómanos</string>
+    <string name="login_collector">SOY UN COLECCIONISTA</string>
+    <string name="login_visitor">SOY UN VISITANTE</string>
+
+    <string name="most_popular_albums">Albums mas populares</string>
+    <string name="artist_on_trend">Artistas en tendencias</string>
+    <string name="important_collectors">Colleccionistas reconocidos</string>
+    <string name="bands_on_fire">Bandas del momento</string>
+
+    <string name="my_albums">Mis albumes</string>
+
+    <string name="my_artists">Mis artistas</string>
+
+    <string name="collectors_on_trend">Coleccionistas en tendencias</string>
+    <string name="collectors">Coleccionistas</string>
+
+    <string name="new_award">Nuevo premio</string>
+    <string name="prize_name">Nombre</string>
+    <string name="prize_des">Descripción</string>
+    <string name="prize_org">Organización</string>
+    <string name="prize_save">Guardar</string>
+
+    <string name="new_album">Nuevo Album</string>
+    <string name="album_name">Nombre</string>
+    <string name="album_cover">Imagen</string>
+    <string name="album_description">Descripción</string>
+    <string name="album_releaseDate">Fecha lanzamiento</string>
+    <string name="album_recordLabel">Casa disquera</string>
+    <string name="album_genre">Género</string>
+
+    <dimen name="padding_small_int">16</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="image_small_size">100dp</dimen>
+    <dimen name="image_large_size">250dp</dimen>
+    <dimen name="rounded_small_radius">25</dimen>
+    <dimen name="text_image_width">25</dimen>
+    <string name="title_activity_home_collector_screen">HomeCollectorScreen</string>
+</resources>
