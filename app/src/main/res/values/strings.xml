@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">ABCall</string>
+
+    <string name="user">User</string>
+    <string name="team">Team</string>
+    <string name="continue_as">Continue as</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+
+    <string name="greeting_login">Welcome to Vinyls</string>
+    <string name="greeting_visitant">Welcome Visitant</string>
+    <string name="greeting_collector">Welcome Collector</string>
+
+    <string name="login_header">Welcome to Vinyls, the best app ever</string>
+    <string name="login_collector">I AM COLLECTOR</string>
+    <string name="login_visitor">I AM VISITANT</string>
+
+    <string name="most_popular_albums">Most popular albums</string>
+    <string name="artist_on_trend">Artists on TREND </string>
+    <string name="important_collectors">Important collectors</string>
+    <string name="bands_on_fire">Bands on fire</string>
+
+    <string name="my_albums">My albums</string>
+
+    <string name="my_artists">My artists</string>
+
+    <string name="collectors_on_trend">Collectors on trend</string>
+    <string name="collectors">Collectors</string>
+
+    <string name="new_award">New award</string>
+    <string name="prize_name">Name</string>
+    <string name="prize_des">Description</string>
+    <string name="prize_org">Organization</string>
+    <string name="prize_save">Save</string>
+
+    <string name="new_album">New Album</string>
+    <string name="album_name">Name</string>
+    <string name="album_cover">Image</string>
+    <string name="album_description">Description</string>
+    <string name="album_releaseDate">Release Date</string>
+    <string name="album_recordLabel">Record</string>
+    <string name="album_genre">Genre</string>
+
+
+    <dimen name="padding_small_int">16</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="image_small_size">100dp</dimen>
+    <dimen name="image_large_size">250dp</dimen>
+    <dimen name="rounded_small_radius">25</dimen>
+    <dimen name="text_image_width">25</dimen>
+    <string name="title_activity_home_collector_screen">HomeCollectorScreen</string>
+
+</resources>
