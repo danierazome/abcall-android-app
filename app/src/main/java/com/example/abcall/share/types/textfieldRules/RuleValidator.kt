@@ -1,4 +1,4 @@
-package com.example.abcall.user.share.types.textfieldRules
+package com.example.abcall.share.types.textfieldRules
 
 import com.example.abcall.R
 

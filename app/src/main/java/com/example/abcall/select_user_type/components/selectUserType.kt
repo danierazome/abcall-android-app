@@ -18,6 +18,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import com.example.abcall.R
+import com.example.abcall.share.theme.teamThemeKey
+import com.example.abcall.team.config.TeamScreens
 import com.example.abcall.user.config.UserScreens
 
 @Composable
@@ -62,8 +64,8 @@ fun ButtonsSection(
         Button(
             onClick =
             {
-                navigateTo("")
-                changeTheme(1)
+                navigateTo(TeamScreens.SignIn.route)
+                changeTheme(teamThemeKey)
             },
             modifier = modifier
                 .align(Alignment.CenterHorizontally)

@@ -1,6 +1,6 @@
 package com.example.abcall.user.sign_in.types
 
-import com.example.abcall.user.share.types.BackendError
+import com.example.abcall.share.types.server.BackendError
 import com.example.abcall.user.sign_in.data.types.SignInUserResponse
 
 sealed interface SignInUserState {

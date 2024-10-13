@@ -5,9 +5,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.abcall.user.config.UserScreens
 import com.example.abcall.select_user_type.components.SelectUserType
 import com.example.abcall.select_user_type.config.UserTypeScreens
+import com.example.abcall.team.config.TeamScreens
+import com.example.abcall.team.sign_in.components.SignInTeam
+import com.example.abcall.user.config.UserScreens
 import com.example.abcall.user.sign_in.components.SignInUser
 
 @Composable
@@ -32,6 +34,13 @@ fun IndexApp(
             SignInUser(
                 navigateUp = { navController.navigateUp() },
                 navigateTo = {navController.navigate(it)})
+        }
+
+        composable(route = TeamScreens.SignIn.route) {
+            SignInTeam(
+                navigateUp = { navController.navigateUp() },
+                navigateTo = {navController.navigate(it)},
+                changeTheme = changeTheme)
         }
 
     }

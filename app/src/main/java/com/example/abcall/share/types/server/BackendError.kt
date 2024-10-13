@@ -1,4 +1,4 @@
-package com.example.abcall.user.share.types
+package com.example.abcall.share.types.server
 
 import com.google.gson.Gson
 
