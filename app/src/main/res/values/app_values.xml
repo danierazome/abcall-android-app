@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <integer name="user_theme">0</integer>
     <integer name="team_theme">1</integer>
 

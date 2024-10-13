@@ -1,6 +1,5 @@
-package com.example.abcall.user.share.types.textfieldRules
+package com.example.abcall.share.types.textfieldRules
 
-import androidx.compose.ui.res.stringResource
 import com.example.abcall.R
 
 class EmailRules(

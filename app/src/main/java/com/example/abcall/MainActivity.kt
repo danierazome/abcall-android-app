@@ -4,6 +4,7 @@ package com.example.abcall
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -13,6 +14,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.abcall.share.theme.AppTheme
+import com.example.abcall.share.view_model.ThemeViewModel
 
 
 class MainActivity : ComponentActivity() {
@@ -22,14 +24,14 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            var typeTheme by remember { mutableIntStateOf(0) }
+            val themeViewModel: ThemeViewModel by viewModels()
 
-            AppTheme(userType = typeTheme) {
+            AppTheme(userType = themeViewModel.type) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    IndexApp(changeTheme = {typeTheme = it})
+                    IndexApp(changeTheme = {themeViewModel.type = it})
                 }
             }
         }

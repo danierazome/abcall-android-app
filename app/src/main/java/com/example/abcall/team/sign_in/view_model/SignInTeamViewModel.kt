@@ -1,4 +1,4 @@
-package com.example.abcall.user.sign_in.view_model
+package com.example.abcall.team.sign_in.view_model
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -12,13 +12,12 @@ import com.example.abcall.AbCallApplication
 import com.example.abcall.share.types.textfieldRules.emailValidation
 import com.example.abcall.share.types.textfieldRules.passwordValidation
 import com.example.abcall.share.types.textfieldRules.Validation
-import com.example.abcall.user.sign_in.data.types.SignInUserRepoI
-import com.example.abcall.user.sign_in.data.types.SignInUserRequest
-import com.example.abcall.user.sign_in.types.SignInUserState
+import com.example.abcall.team.sign_in.data.types.SignInTeamRepoI
+import com.example.abcall.team.sign_in.data.types.SignInTeamRequest
+import com.example.abcall.team.sign_in.types.SignInTeamState
 import kotlinx.coroutines.launch
 
-
-class SignInUserViewModel(private val repository: SignInUserRepoI): ViewModel() {
+class SignInTeamViewModel(private val repository: SignInTeamRepoI): ViewModel() {
 
     var email by mutableStateOf("")
         private set
@@ -31,7 +30,7 @@ class SignInUserViewModel(private val repository: SignInUserRepoI): ViewModel() 
     var formIsValid by mutableStateOf(false)
         private set
 
-    var state: SignInUserState by mutableStateOf(SignInUserState.Init)
+    var state: SignInTeamState by mutableStateOf(SignInTeamState.Init)
         private set
 
     fun updateEmail(value: String) {
@@ -51,14 +50,14 @@ class SignInUserViewModel(private val repository: SignInUserRepoI): ViewModel() 
     }
 
     fun signIn() {
-        state = SignInUserState.Loading
+        state = SignInTeamState.Loading
         viewModelScope.launch {
-            val request = SignInUserRequest(email, password)
+            val request = SignInTeamRequest(email, password)
             val response = repository.signIn(request)
             state = if (response.isOk()) {
-                SignInUserState.Success(response = response.ok)
+                SignInTeamState.Success(response = response.ok)
             }else {
-                SignInUserState.Error(error = response.err)
+                SignInTeamState.Error(error = response.err)
             }
         }
     }
@@ -68,8 +67,8 @@ class SignInUserViewModel(private val repository: SignInUserRepoI): ViewModel() 
             initializer {
                 val application =
                     (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as AbCallApplication)
-                val repository = application.signInUserContainer.repository
-                SignInUserViewModel(repository = repository)
+                val repository = application.signInTeamContainer.repository
+                SignInTeamViewModel(repository = repository)
             }
         }
     }

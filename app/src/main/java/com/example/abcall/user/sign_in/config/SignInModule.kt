@@ -1,6 +1,7 @@
 package com.example.abcall.user.sign_in.config
 
 import android.content.Context
+import com.example.abcall.share.types.server.backendUrl
 import com.example.abcall.user.sign_in.data.network.SignInUserApiService
 import com.example.abcall.user.sign_in.data.network.SignInUserDataSource
 import com.example.abcall.user.sign_in.data.repository.SignInUserRepo
@@ -22,7 +23,7 @@ class SignInModule(private val context: Context): SignInModuleI {
             .build()
 
         Retrofit.Builder()
-            .baseUrl("https://spring-app-226402391108.us-central1.run.app")
+            .baseUrl(backendUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()

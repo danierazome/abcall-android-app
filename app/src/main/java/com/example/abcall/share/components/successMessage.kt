@@ -15,7 +15,7 @@ fun successMessageComp(message: String) {
 
     ElevatedCard (
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer,
+            containerColor = MaterialTheme.colorScheme.tertiaryContainer,
         ),
         elevation = CardDefaults.cardElevation(
             defaultElevation = dimensionResource(R.dimen.card_elevation)

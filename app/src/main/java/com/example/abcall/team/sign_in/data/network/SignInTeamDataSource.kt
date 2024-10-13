@@ -1,15 +1,15 @@
-package com.example.abcall.user.sign_in.data.network
+package com.example.abcall.team.sign_in.data.network
 
 import com.example.abcall.share.types.server.BackendError
 import com.example.abcall.share.types.ResultI
 import com.example.abcall.share.types.server.backendErrorFromJson
-import com.example.abcall.user.sign_in.data.types.SignInUserRequest
-import com.example.abcall.user.sign_in.data.types.SignInUserResponse
+import com.example.abcall.team.sign_in.data.types.SignInTeamRequest
+import com.example.abcall.team.sign_in.data.types.SignInTeamResponse
 import retrofit2.HttpException
 import java.io.IOException
 
-class SignInUserDataSource(private val apiService: SignInUserApiService) {
-    suspend fun signIn(request: SignInUserRequest): ResultI<SignInUserResponse, BackendError> {
+class SignInTeamDataSource(private val apiService: SignInTeamApiService) {
+    suspend fun signIn(request: SignInTeamRequest): ResultI<SignInTeamResponse, BackendError> {
         return try {
             val response = apiService.signIn(request)
             ResultI(response, null)
