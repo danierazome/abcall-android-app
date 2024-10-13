@@ -1,4 +1,4 @@
-package com.example.abcall.config.theme
+package com.example.abcall.share.theme
 
 import android.app.Activity
 import androidx.compose.material3.MaterialTheme
@@ -7,8 +7,8 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
-import com.example.abcall.config.theme.teamTheme.teamScheme
-import com.example.abcall.config.theme.userTheme.userScheme
+import com.example.abcall.share.theme.teamTheme.teamScheme
+import com.example.abcall.share.theme.userTheme.userScheme
 
 
 @Composable

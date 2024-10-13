@@ -1,4 +1,4 @@
-package com.example.abcall.config.theme.teamTheme
+package com.example.abcall.share.theme.teamTheme
 
 import androidx.compose.material3.darkColorScheme
 

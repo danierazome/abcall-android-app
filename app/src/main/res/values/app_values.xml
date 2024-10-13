@@ -11,4 +11,8 @@
 
     <dimen name="l_vertical_padding">30dp</dimen>
     <dimen name="l_horizontal_padding">30dp</dimen>
+
+    <dimen name="card_elevation">10dp</dimen>
+
+    <dimen name="radius_progress_indicator">40dp</dimen>
 </resources>

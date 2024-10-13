@@ -9,6 +9,10 @@
     <string name="password">Password</string>
 
     <string name="sign_in">Sign in</string>
+    <string name="default_error"> </string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="password_min_length">Length minimum 6</string>
+
     <string name="sign_up">Sign up</string>
 
     <string name="greeting_login">Welcome to Vinyls</string>

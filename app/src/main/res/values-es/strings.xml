@@ -9,6 +9,11 @@
     <string name="password">Contraseña</string>
 
     <string name="sign_in">Ingresar</string>
+    <string name="default_error"> </string>
+    <string name="invalid_email">Email invalido</string>
+    <string name="password_min_length">Mínimo 6 caracteres</string>
+
+
     <string name="sign_up">Registrarse</string>
 
     <string name="greeting_login">Bienvenido a Vinilos</string>
