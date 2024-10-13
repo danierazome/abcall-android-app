@@ -1,4 +1,4 @@
-package com.example.abcall.config.theme
+package com.example.abcall.share.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

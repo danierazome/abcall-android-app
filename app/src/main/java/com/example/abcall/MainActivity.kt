@@ -12,7 +12,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import com.example.abcall.config.theme.AppTheme
+import com.example.abcall.share.theme.AppTheme
 
 
 class MainActivity : ComponentActivity() {
