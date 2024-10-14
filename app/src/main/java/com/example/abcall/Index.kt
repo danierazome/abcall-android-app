@@ -5,12 +5,13 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.abcall.select_user_type.components.SelectUserType
+import com.example.abcall.select_user_type.components.selectUserType
 import com.example.abcall.select_user_type.config.UserTypeScreens
 import com.example.abcall.team.config.TeamScreens
-import com.example.abcall.team.sign_in.components.SignInTeam
+import com.example.abcall.team.sign_in.components.signInTeam
 import com.example.abcall.user.config.UserScreens
-import com.example.abcall.user.sign_in.components.SignInUser
+import com.example.abcall.user.sign_in.components.signInUser
+import com.example.abcall.user.sign_up.components.signUpUser
 
 @Composable
 fun IndexApp(
@@ -22,7 +23,7 @@ fun IndexApp(
         startDestination = UserTypeScreens.SelectUserType.name
     ) {
         composable(route = UserTypeScreens.SelectUserType.name) {
-            SelectUserType(
+            selectUserType(
                 navigateTo = {
                     navController.navigate(it)
                 },
@@ -31,13 +32,19 @@ fun IndexApp(
         }
 
         composable(route = UserScreens.SignIn.route) {
-            SignInUser(
+            signInUser(
+                navigateUp = { navController.navigateUp() },
+                navigateTo = {navController.navigate(it)})
+        }
+
+        composable(route = UserScreens.SignUp.route) {
+            signUpUser(
                 navigateUp = { navController.navigateUp() },
                 navigateTo = {navController.navigate(it)})
         }
 
         composable(route = TeamScreens.SignIn.route) {
-            SignInTeam(
+            signInTeam(
                 navigateUp = { navController.navigateUp() },
                 navigateTo = {navController.navigate(it)},
                 changeTheme = changeTheme)

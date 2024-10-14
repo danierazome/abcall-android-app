@@ -6,5 +6,5 @@ interface RuleValidator {
     fun validate(value: String): Validation
 }
 
-    data class Validation(val result: Boolean = true, val message: Int = R.string.default_error)
+data class Validation(val result: Boolean = true, val message: Int = R.string.default_error)
 

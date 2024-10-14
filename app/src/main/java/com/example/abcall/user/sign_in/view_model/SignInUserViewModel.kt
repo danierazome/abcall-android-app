@@ -9,9 +9,9 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.abcall.AbCallApplication
+import com.example.abcall.share.types.textfieldRules.Validation
 import com.example.abcall.share.types.textfieldRules.emailValidation
 import com.example.abcall.share.types.textfieldRules.passwordValidation
-import com.example.abcall.share.types.textfieldRules.Validation
 import com.example.abcall.user.sign_in.data.types.SignInUserRepoI
 import com.example.abcall.user.sign_in.data.types.SignInUserRequest
 import com.example.abcall.user.sign_in.types.SignInUserState

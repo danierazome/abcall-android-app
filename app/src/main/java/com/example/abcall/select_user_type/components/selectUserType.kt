@@ -23,7 +23,7 @@ import com.example.abcall.team.config.TeamScreens
 import com.example.abcall.user.config.UserScreens
 
 @Composable
-fun SelectUserType(
+fun selectUserType(
     modifier: Modifier = Modifier,
     navigateTo: (String) -> Unit = {},
     changeTheme: (Int) -> Unit
@@ -71,8 +71,7 @@ fun ButtonsSection(
                 .align(Alignment.CenterHorizontally)
                 .padding(vertical = dimensionResource(R.dimen.sm_vertical_padding)),
             colors = ButtonDefaults.buttonColors(
-                containerColor = colorResource(id = R.color.team_primary_color)
-            )
+                containerColor = colorResource(id = R.color.team_primary_color))
         ) {
             Text(stringResource(id = R.string.team))
         }

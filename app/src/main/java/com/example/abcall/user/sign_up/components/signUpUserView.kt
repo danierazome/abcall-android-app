@@ -1,6 +1,5 @@
-package com.example.abcall.user.sign_in.components
+package com.example.abcall.user.sign_up.components
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -13,31 +12,24 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
-import androidx.compose.ui.res.painterResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.abcall.R
-import com.example.abcall.user.sign_in.view_model.SignInUserViewModel
+import com.example.abcall.user.sign_up.view_model.SignUpUserViewModel
 
 @Composable
-fun signInUser(
+fun signUpUser(
     modifier: Modifier = Modifier,
     navigateUp: () -> Unit,
     navigateTo: (String) -> Unit) {
 
-    val viewModel: SignInUserViewModel = viewModel(factory = SignInUserViewModel.factory)
+    val viewModel: SignUpUserViewModel = viewModel(factory = SignUpUserViewModel.factory)
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.SpaceBetween
+        verticalArrangement = Arrangement.SpaceEvenly
     ) {
 
-        Image(
-            painter = painterResource(R.drawable.user_sign_in_logo),
-            contentDescription = "Login user logo",
-            modifier = Modifier.padding(vertical = dimensionResource(R.dimen.l_vertical_padding))
-        )
-
-        FormSignInUser(navigateTo = navigateTo, viewModel = viewModel)
+        formSignUpUser(viewModel = viewModel)
 
         Button(
             shape = CircleShape,
