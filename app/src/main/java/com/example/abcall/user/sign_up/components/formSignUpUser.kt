@@ -1,4 +1,4 @@
-package com.example.abcall.user.sign_in.components
+package com.example.abcall.user.sign_up.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -6,8 +6,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,15 +16,13 @@ import com.example.abcall.R
 import com.example.abcall.share.components.errorMessageComp
 import com.example.abcall.share.components.progressIndicatorComp
 import com.example.abcall.share.components.successMessageComp
-import com.example.abcall.user.config.UserScreens
-import com.example.abcall.user.sign_in.types.SignInUserState
-import com.example.abcall.user.sign_in.view_model.SignInUserViewModel
+import com.example.abcall.user.sign_up.types.SignUpUserState
+import com.example.abcall.user.sign_up.view_model.SignUpUserViewModel
 
 @Composable
-fun FormSignInUser(
+fun formSignUpUser(
     modifier: Modifier = Modifier,
-    navigateTo: (String) -> Unit,
-    viewModel: SignInUserViewModel
+    viewModel: SignUpUserViewModel
 ) {
     val state = viewModel.state
     Column(
@@ -36,56 +32,37 @@ fun FormSignInUser(
     ) {
 
         when(state) {
-            is SignInUserState.Error -> state.error?.let { errorMessageComp(it.message) }
+            is SignUpUserState.Error -> state.error?.let { errorMessageComp(it.message) }
             else -> Unit
         }
 
         when(state) {
-            is SignInUserState.Success -> state.response?.let { successMessageComp(it.message) }
+            is SignUpUserState.Success -> state.response?.let { successMessageComp(it.message) }
             else -> Unit
         }
 
-        emailSectionUser(viewModel = viewModel)
-        passwordSectionUser(viewModel = viewModel)
+        nameSectionUser(viewModel = viewModel)
+        emailSectionUserR(viewModel = viewModel)
+        idSectionUser(viewModel = viewModel)
+        passwordSectionUserR(viewModel = viewModel)
+        cPasswordSectionUser(viewModel = viewModel)
+        clientIdSectionUser(viewModel = viewModel)
 
         when (state) {
-            is SignInUserState.Loading -> progressIndicatorComp()
+            is SignUpUserState.Loading -> progressIndicatorComp()
             else -> Button(
                 enabled = viewModel.formIsValid,
                 shape = CircleShape,
                 onClick =
                 {
-                    viewModel.signIn()
+                    viewModel.signUp()
                 },
                 modifier = modifier
                     .align(Alignment.CenterHorizontally)
                     .padding(vertical = dimensionResource(R.dimen.sm_vertical_padding))
             ) {
-                Text(text = stringResource(R.string.sign_in))
+                Text(text = stringResource(R.string.sign_up))
             }
-        }
-
-        Button(
-            onClick =
-            {
-                navigateTo(UserScreens.SignUp.route)
-            },
-            modifier = modifier
-                .align(Alignment.CenterHorizontally)
-                .padding(vertical = dimensionResource(R.dimen.sm_vertical_padding)),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = MaterialTheme.colorScheme.tertiaryContainer,
-                contentColor = MaterialTheme.colorScheme.onTertiaryContainer)
-
-        ) {
-            Text(text = stringResource(R.string.sign_up))
         }
     }
 }
-
-
-
-
-
-
-

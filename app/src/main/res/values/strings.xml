@@ -7,11 +7,31 @@
 
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="user_name">Name</string>
+    <string name="user_id">Id</string>
+    <string name="client_nit">Company Nit</string>
+
 
     <string name="sign_in">Sign in</string>
     <string name="default_error"> </string>
+
     <string name="invalid_email">Invalid Email</string>
+
     <string name="password_min_length">Length minimum 6</string>
+    <string name="password_max_length">Length maximum 12</string>
+    <string name="password_match">Passwords do not match</string>
+
+    <string name="num_min_length">Length minimum 6</string>
+    <string name="num_max_length">Length maximum 12</string>
+    <string name="num_invalid">Invalid number</string>
+
+    <string name="name_min_length">Length minimum 6</string>
+
+    <string name="title_min_length">Length minimum 6</string>
+    <string name="title_max_length">Length maximum 20</string>
+
+    <string name="desc_min_length">Length minimum 10</string>
+    <string name="desc_max_length">Length maximum 200</string>
 
     <string name="sign_up">Sign up</string>
 

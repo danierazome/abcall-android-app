@@ -21,7 +21,7 @@ import com.example.abcall.team.sign_in.view_model.SignInTeamViewModel
 
 
 @Composable
-fun SignInTeam(
+fun signInTeam(
     modifier: Modifier = Modifier,
     navigateUp: () -> Unit,
     navigateTo: (String) -> Unit,
